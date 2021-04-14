@@ -1,0 +1,26 @@
+
+{% load static %}
+{% static "images" as baseurl %}
+<head>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+</head>
+
+    <br>
+    <br>
+    <form action="login" method="POST">
+        {% csrf_token %}
+        
+        <div class="form-group"  >
+        
+              <label for="exampleInputEmail1">Username</label>
+              <input type="text" name = "username" class="form-control"  placeholder="Enter username">
+              <br><br>
+
+              <label for="exampleInputEmail1">Password</label>
+      <input type="password" name = "password" class="form-control"  placeholder="password">
+              
+            </div>
+            <input type="submit">
+    </form>
